@@ -1,4 +1,4 @@
-# PFLD+GhostNet+MobileOne=PFLDGhostOne，重参数化让PFLD重生，精度提升超过4%，速度提升超过55%，代码已开源
+# PFLD_GhostOne
 &emsp;&emsp;在两年前，我曾经分享过利用GhostNet对PFLD进行优化的文章——[《人脸关键点检测算法PFLD的优化实战记录》](https://blog.csdn.net/u010892804/article/details/108509243?spm=1001.2014.3001.5501)，那里面介绍了经过各种奇技淫巧，GhostNet确实能够提升PFLD的速度和精度，暂且称呼这个方法为PFLD-GhostNet，而且分享到[GitHub：FaceLandmark_PFLD_UltraLight](https://github.com/AnthonyF333/FaceLandmark_PFLD_UltraLight)后获得六十多颗星，也算老怀安慰了。
 &emsp;&emsp;两年后，在机缘巧合下接触到Apple大佬的MobileOne，灵机一触觉得MobileOne可能对PFLD-GhostNet还会有进一步的提升，决定尝试一下，便有了今天这篇文章。这次主要记录将GhostNet模块与MobileOne模块进行结合，对PFLD进行进一步优化的实战经验，为需要优化人脸关键点检测算法的小伙伴们提供参考，新的方法我将它叫做PFLD-GhostOne。这个PFLD-GhostOne模型比Slim版本的PFLD-GhostNet精度提升了近3.75%，相比原始PFLD更是提升了4.25%，NCNN推理速度比Slim版本的PFLD-GhostNet提升了超过11%，比原始版本的PFLD提升超过55%。
 > * MobileOne简介
