@@ -58,18 +58,6 @@ GhostOne Module的整体结构如图5所示：
 &emsp;&emsp;通过对比Ghost Bottleneck可以看出，GhostOne Bottleneck缺少了Skip Connection，这里参考的是YoloV7的做法，YoloV7的作者发现，当两个重参数化模块串联时，这个Skip Connection会破坏模型的特征表达能力，最终便有了上面的GhostOne Bottleneck结构。
 &emsp;&emsp;最终的PFLD-GhostOne模型结构，就是在PFLD-GhostNet的基础上，直接将上述的GhostOne Bottleneck替换掉原始的Ghost Bottleneck，同时把一般的卷积操作也替换成MobileOne Block，在模型精度有比较大的提升的同时，推理速度也有了一个质的提升。PFLD-GhostOne结构如表1：
 
-<!-- 让表格居中显示的风格 -->
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-<div class="center">
-
 Input|Operator|t|c|n|s
 :--:|:--:|:--:|:--:|:--:|:--:
 112x112x3|MobileOneBlock 3×3|-|64|1|2
@@ -82,7 +70,7 @@ Input|Operator|t|c|n|s
 7x7x32|Conv7×7|-|128|1|1
 (S1) 56x56x64<br />(S2) 28x28x80<br />(S3) 14x14x96<br />(S4) &ensp;7x7x144<br />(S5) &ensp;1x1x128|AvgPool<br />AvgPool<br />AvgPool<br />AvgPool<br />-|-<br />-<br />-<br />-<br />-|64<br />80<br />96<br />144<br />128|1<br />1<br />1<br />1<br />-|-<br />-<br />-<br />-<br />-
 S1,S2,S3,S4,S5|Concat+Full Connection|-|136|1|-
-</div>
+
 <p align="center"><font size=4.>$\uparrow$ 表1 PFLD-GhostOne结构</font></p>
 说明：t代表GhostOne Bottleneck中间通道的拓展倍数，c代表GhostOne Bottleneck的输出通道数目，n代表GhostOne Bottleneck的串联个数，s代表stride，模型所有的MobileOne Block中的分支数目都是6。
 
@@ -95,6 +83,7 @@ PFLD|0.05438|1.65(CPU)&emsp;2.78(GPU)|5.4(CPU)&emsp;5.1(GPU)|4.66
 PFLD-GhostNet|0.05347|1.79(CPU)&emsp;2.55(GPU)|2.9(CPU)&emsp;5.3(GPU)|3.09
 PFLD-GhostNet-Slim|0.05410|2.11(CPU)&emsp;2.54(GPU)|2.7(CPU)&emsp;5.2(GPU)|2.83
 PFLD-GhostOne|0.05207|1.79(CPU)&emsp;2.18(GPU)|2.4(CPU)&emsp;5.0(GPU)|2.71
+
 说明：OpenVino和NCNN的推理时间均在11th Gen Intel(R) Core(TM) i5-11500下进行统计。
 
 
