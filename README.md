@@ -12,7 +12,7 @@
 &emsp;&emsp;有关GhostNet和PFLD的介绍可以参考我两年前分享的文章[《人脸关键点检测算法PFLD的优化实战记录》](https://blog.csdn.net/u010892804/article/details/108509243?spm=1001.2014.3001.5501)，这里主要介绍一下MobileOne。
 &emsp;&emsp;MobileOne是2022年Apple大佬提出来的用于移动设备的网络结构，利用重参数化可以有效提高轻量级网络的性能，当然重参数化是RepVGG最先提出来，有兴趣的童鞋可以去膜拜一下，MobileOne只是站在RepVGG巨人的肩膀上提出来的模型结构。如下图所示，MobileOne的基础模块在训练时是多分支的卷积结构，由于卷积和BN都是线性操作，经过重参数化后这个多分支结构可以合并成一个卷积和BN操作，因此在推理阶段，这个多分支结构就可以等效为单通路结构，可以大大减少推理阶段的运算量。在下面的性能表格中可以看到最轻量级的MobileOne-S0比ShuffleNetV2-x1.0的精度已经有一个较大的提升，推理速度两者也相当。
 
-<div align=center>![]（https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/1.png）
+<div align=center>![](https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/1.png)
 
 <p align="center"><font size=4.>$\uparrow$ 图1 MobileOne Block结构</font></p>
 
