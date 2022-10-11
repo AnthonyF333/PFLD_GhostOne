@@ -17,7 +17,7 @@
 ![](https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/1.png)
 </div>
   
-<p align="center"><font size=4.>$\uparrow$ 图1 MobileOne Block结构</font></p>
+<p align="center"><font size=4.>&uarr; 图1 MobileOne Block结构</font></p>
 
 <div class="center">
 
