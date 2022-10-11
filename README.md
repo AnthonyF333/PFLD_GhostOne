@@ -15,7 +15,7 @@
 <div align=center>
 <img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/1.png">
 </div>
-<p align="center"><font size=4.>&uarr; 图1 MobileOne Block结构</font></p>
+<p align="center"><font size=4.>$\uparrow$ 图1 MobileOne Block结构</font></p>
 &nbsp;
 
 <div align=center>
@@ -28,33 +28,30 @@
 ### GhostOne模块
 在介绍GhostOne之前，我们先重温一下GhostNet的基础结构。
 GhostNet的基础结构Ghost Module如图3所示：
-<div class="center">
 
-![][5] 
+<div align=center>
+<img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/5.png">
 </div>
 <p align="center"><font size=4.>$\uparrow$ 图3 Ghost Module</font></p>
 
 通过堆叠Ghost Module形成的Ghost Bottleneck如图4所示：
-<div class="center">
-
-![][3] 
+<div align=center>
+<img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/3.png">
 </div>
 <p align="center"><font size=4.>$\uparrow$ 图4 Ghost Bottleneck</font></p>
 
 现在进入正题，介绍今天的主角GhostOne。
 GhostOne Module的整体结构如图5所示：
-<div class="center">
-
-![][6]
+<div align=center>
+<img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/6.png">
 </div>
 <p align="center"><font size=4.>$\uparrow$ 图5 GhostOne Module</font></p>
 
 &emsp;&emsp;可以看到GhostOne Module其实和Ghost Module的整体结构非常相像，两者的最大区别就是GhostOne Module利用MobileOne中的多分支卷积结构代替了Ghost Module中单一的卷积操作。在训练过程中两者的结构可能差异比较大，一旦经过重参数化后，在推理过程中两者的结构理论上是一模一样的，计算量和参数量也都是一样的，因此GhostOne Module对比原始的Ghost Module，在推理速度上是一样的。
 
 通过堆叠GhostOne Module形成的GhostOne Bottleneck如图6所示：
-<div class="center">
-
-![][4]
+<div align=center>
+<img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/4.png">
 </div>
 <p align="center"><font size=4.>$\uparrow$ 图6 GhostOne Bottleneck</font></p>
 
