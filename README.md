@@ -79,14 +79,12 @@ S1,S2,S3,S4,S5|Concat+Full Connection|-|136|1|-
 ## 优化结果
 WFLW测试结果
 模型输入大小为112x112
-<div align="center">
 Model|NME|OpenVino Latency(ms)|NCNN Latency(ms)|ONNX Model Size(MB)
 :--:|:--:|:--:|:--:|:--:
 PFLD|0.05438|1.65(CPU)&emsp;2.78(GPU)|5.4(CPU)&emsp;5.1(GPU)|4.66
 PFLD-GhostNet|0.05347|1.79(CPU)&emsp;2.55(GPU)|2.9(CPU)&emsp;5.3(GPU)|3.09
 PFLD-GhostNet-Slim|0.05410|2.11(CPU)&emsp;2.54(GPU)|2.7(CPU)&emsp;5.2(GPU)|2.83
 PFLD-GhostOne|0.05207|1.79(CPU)&emsp;2.18(GPU)|2.4(CPU)&emsp;5.0(GPU)|2.71
-</div>
 
 说明：OpenVino和NCNN的推理时间均在11th Gen Intel(R) Core(TM) i5-11500下进行统计。
 
