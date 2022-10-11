@@ -58,7 +58,7 @@ GhostOne Module的整体结构如图5所示：
 &emsp;&emsp;通过对比Ghost Bottleneck可以看出，GhostOne Bottleneck缺少了Skip Connection，这里参考的是YoloV7的做法，YoloV7的作者发现，当两个重参数化模块串联时，这个Skip Connection会破坏模型的特征表达能力，最终便有了上面的GhostOne Bottleneck结构。
 &emsp;&emsp;最终的PFLD-GhostOne模型结构，就是在PFLD-GhostNet的基础上，直接将上述的GhostOne Bottleneck替换掉原始的Ghost Bottleneck，同时把一般的卷积操作也替换成MobileOne Block，在模型精度有比较大的提升的同时，推理速度也有了一个质的提升。PFLD-GhostOne结构如表1：
 
-<div align="center">
+<div align=center>
 Input|Operator|t|c|n|s
 :--:|:--:|:--:|:--:|:--:|:--:
 112x112x3|MobileOneBlock 3×3|-|64|1|2
