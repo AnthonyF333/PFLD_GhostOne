@@ -18,9 +18,8 @@
 
 <p align="center"><font size=4.>&uarr; 图1 MobileOne Block结构</font></p>
 
-<div class="center">
-
-![][2]  
+<div align=center>
+<img src="https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/2.png">
 </div>
 <p align="center"><font size=4.>$\uparrow$ 图2 MobileOne性能表</font></p>
 
