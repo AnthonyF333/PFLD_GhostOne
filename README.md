@@ -93,4 +93,3 @@ Then run onnx_inference.py to detect and align the images in the *test_folder*, 
 * [GhostNet](https://github.com/huawei-noah/ghostnet)
 * [MobileOne](https://github.com/apple/ml-mobileone)
 * [PFLD_GhostNet](https://github.com/AnthonyF333/FaceLandmark_PFLD_UltraLight)
-------
