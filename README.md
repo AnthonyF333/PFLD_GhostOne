@@ -15,6 +15,7 @@ More details about GhostOne can be found on this [blog](https://blog.csdn.net/u0
 * Support exporting to ONNX format
 
 ![image](https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/outpy.gif)
+![image](https://github.com/AnthonyF333/PFLD_GhostOne/blob/main/img/nice.gif)
 
 &nbsp;
 
