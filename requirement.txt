@@ -1,0 +1,10 @@
+tensorboard
+easydict
+opencv-python
+matplotlib
+scipy
+rich
+onnxruntime
+onnx
+onnxsim
+onnxoptimizer
